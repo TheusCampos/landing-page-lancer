@@ -1,0 +1,17 @@
+/* index.css - centraliza imports de estilos
+   Ordem: reset -> variables -> base -> layout -> components -> pages */
+/* Comentários em Português: Mantemos a ordem para evitar conflitos de cascade */
+@import url('./global/reset.css');
+@import url('./global/variables.css');
+@import url('./global/base.css');
+@import url('./global/layout.css');
+@import url('./global/components.css');
+
+/* Estilos específicos da página inicial */
+@import url('./pages/home.css');
+
+/* Seções específicas da página */
+@import url('./pages/partials/hero.css');
+@import url('./pages/partials/timeline.css');
+@import url('./pages/partials/gallery.css');
+@import url('./pages/partials/tech-specs.css');

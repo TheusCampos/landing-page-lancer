@@ -1,0 +1,19 @@
+/* Estilos base e tipografia - comentários em Português */
+body { font-family: var(--font-body); color: var(--text-dark); background-color: var(--page-bg); overflow-x: hidden; }
+.h1,.h2,.h3,.h4,.h5,.h6, h1,h2,h3,h4,h5,h6 { font-family: var(--font-heading); font-weight: 700; }
+.section-title { position: relative; margin-bottom: var(--space-5); text-align: center; }
+.section-title::after { content: ''; display:block; width:80px; height:4px; background: var(--primary-color); margin: 10px auto; border-radius: 2px; }
+.container-narrow { max-width: 960px; margin-inline: auto; padding-inline: var(--space-3); }
+
+/* Overlay sutil de grade (opcional) para profundidade visual sem poluição */
+.page-bg-grid {
+  position: fixed;
+  inset: 0;
+  background-image: linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
+  background-size: 24px 24px, 24px 24px; /* baseado no sistema de 8px */
+  pointer-events: none;
+  z-index: 0;
+}
+@media (prefers-color-scheme: dark) {
+  .page-bg-grid { background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px); }
+}

@@ -1,0 +1,86 @@
+/* Hero (Home) - estilos minimalistas e modernos específicos da seção
+   Comentários em Português para manutenção futura
+   Escopo: apenas elementos dentro da .hero-section */
+
+/* Glass form moderno com foco em acessibilidade e contraste adequado */
+.hero-section .hero-form {
+  /* Vidro translúcido sutil */
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,0.35) 0%,
+    rgba(0,0,0,0.55) 100%
+  );
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius-regular);
+  box-shadow: var(--shadow-soft);
+  padding: var(--space-3);
+}
+
+/* Inputs minimalistas com estados de foco visíveis */
+.hero-section .hero-form .input-group { align-items: center; }
+.hero-section .hero-form input {
+  transition: border-color .25s ease, background .25s ease, transform .2s ease;
+}
+.hero-section .hero-form input:focus {
+  outline: none;
+  border-color: rgba(255,255,255,0.6);
+  background: rgba(0,0,0,0.45);
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.15);
+}
+
+/* Barra de destaque sob o título (inspirada no layout de referência) */
+.hero-section .hero-content h1::after {
+  content: '';
+  display: block;
+  width: clamp(96px, 18vw, 180px);
+  height: 4px;
+  margin-top: var(--space-2);
+  background: linear-gradient(90deg, var(--primary-color), rgba(255,255,255,0.25));
+  border-radius: 2px;
+}
+
+/* Acentos verticais laterais com pointer-events: none para não bloquear cliques */
+.hero-section::before,
+.hero-section::after {
+  content: '';
+  position: absolute;
+  top: 12%;
+  bottom: 12%;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(255,255,255,0.08) 25%,
+    rgba(179,0,0,0.45) 50%,
+    rgba(255,255,255,0.08) 75%,
+    transparent 100%
+  );
+  opacity: .9;
+  border-radius: 2px;
+  pointer-events: none; /* Garante que divs e formulários permaneçam interativos */
+  z-index: 3; /* Acima do overlay, abaixo do conteúdo */
+}
+.hero-section::before { left: clamp(10px, 2vw, 24px); }
+.hero-section::after  { right: clamp(10px, 2vw, 24px); }
+
+/* Overlay com leve gradiente vermelho na base para dar profundidade moderna */
+.hero-section .hero-overlay {
+  background:
+    radial-gradient(circle at 50% 30%, rgba(0,0,0,.55) 0%, rgba(0,0,0,.78) 60%),
+    linear-gradient(to top, rgba(179,0,0,0.18) 0%, rgba(179,0,0,0.08) 35%, transparent 60%);
+}
+
+/* Responsivo (mobile-first) */
+@media (max-width: 576px) {
+  .hero-section .hero-form { padding: var(--space-2); }
+  .hero-section .hero-form .input-group { flex-direction: column; gap: var(--space-2); }
+  .hero-section::before,
+  .hero-section::after { display: none; } /* Em telas pequenas, removemos os acentos verticais */
+}
+
+/* Redução de movimento quando preferido pelo usuário */
+@media (prefers-reduced-motion: reduce) {
+  .hero-section .hero-form input { transition: none !important; }
+}

@@ -1,0 +1,11 @@
+/* Reset CSS moderno - comentários em Português */
+/* Remove margens/paddings padrão e padroniza box-model */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+img, picture, video, canvas, svg { display: block; max-width: 100%; }
+button, input, select, textarea { font: inherit; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+h1,h2,h3,h4,h5,h6,p { margin: 0; }
+a { text-decoration: none; color: inherit; }
+/* Melhora rolagem suave em navegadores modernos */
+html { scroll-behavior: smooth; }

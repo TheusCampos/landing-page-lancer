@@ -1,0 +1,10 @@
+/* Layout, seções, responsividade */
+.content-section { padding: 100px 0; }
+.dark-section { background-color: var(--secondary-color); color: var(--text-light); }
+.accent-section { background-color: var(--accent-color); color: var(--text-light); }
+/* Removido: regra duplicada de .section-divider (definida em components.css) para evitar conflitos de cascade */
+/* Divisor com wave sutil usando mask */
+.section-divider.wave { height: 56px; background: linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.08)); position: relative; }
+.section-divider.wave::before { content:''; position:absolute; inset:0; background: radial-gradient(100% 100% at 50% 0%, rgba(0,0,0,0.15), transparent 70%);} 
+/* Responsivo */
+@media (max-width: 768px) { .content-section { padding: 72px 0; } }

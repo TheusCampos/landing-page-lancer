@@ -1,0 +1,239 @@
+/* ===== SEÇÃO FICHA TÉCNICA ===== */
+
+.tech-specs-section {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-specs-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(220, 38, 38, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(220, 38, 38, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.tech-specs-section .section-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.tech-specs-section .section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #dc2626, #ef4444);
+  border-radius: 2px;
+}
+
+/* ===== TABELA DE ESPECIFICAÇÕES ===== */
+
+.tech-specs-table {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  /* Prefixo para Safari/iOS */
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.specs-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: linear-gradient(135deg, #dc2626, #ef4444);
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.specs-header .spec-category,
+.specs-header .spec-value {
+  padding: 20px 25px;
+  text-align: center;
+}
+
+.specs-body {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.spec-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.spec-row:hover {
+  background: rgba(220, 38, 38, 0.1);
+  transform: translateX(0) scale(1.02);
+}
+
+.spec-row:last-child {
+  border-bottom: none;
+}
+
+.spec-category {
+  padding: 20px 25px;
+  color: #f3f4f6;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.02);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.spec-value {
+  padding: 20px 25px;
+  color: #ffffff;
+  font-weight: 500;
+  font-family: 'Roboto Mono', monospace;
+}
+
+/* ===== IMAGEM TÉCNICA ===== */
+
+.tech-specs-image {
+  position: relative;
+  text-align: center;
+  opacity: 0;
+  transform: translateX(50px) scale(0.9);
+}
+
+.tech-specs-image img {
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 10px 30px rgba(220, 38, 38, 0.3));
+  transition: all 0.3s ease;
+}
+
+.tech-specs-image:hover img {
+  transform: scale(1.05);
+  filter: drop-shadow(0 15px 40px rgba(220, 38, 38, 0.5));
+}
+
+/* ===== EFEITOS DE ANIMAÇÃO ===== */
+
+.tech-specs-section .spec-row.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.tech-specs-section .tech-specs-image.animate-in {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
+/* ===== RESPONSIVIDADE ===== */
+
+@media (max-width: 992px) {
+  .tech-specs-section {
+    padding: 80px 0;
+  }
+  
+  .tech-specs-section .section-title {
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+  }
+  
+  .tech-specs-image {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tech-specs-section {
+    padding: 60px 0;
+  }
+  
+  .tech-specs-section .section-title {
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+  }
+  
+  .specs-header {
+    font-size: 0.9rem;
+  }
+  
+  .specs-header .spec-category,
+  .specs-header .spec-value {
+    padding: 15px 20px;
+  }
+  
+  .spec-category,
+  .spec-value {
+    padding: 15px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .tech-specs-image {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-specs-section .section-title {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+  
+  .specs-header {
+    font-size: 0.8rem;
+  }
+  
+  .specs-header .spec-category,
+  .specs-header .spec-value {
+    padding: 12px 15px;
+  }
+  
+  .spec-category,
+  .spec-value {
+    padding: 12px 15px;
+    font-size: 0.8rem;
+  }
+  
+  .spec-value {
+    font-size: 0.75rem;
+  }
+}
+
+/* ===== OTIMIZAÇÕES PARA ANIMAÇÕES ===== */
+
+.tech-specs-section * {
+  will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spec-row,
+  .tech-specs-image {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  
+  .spec-row:hover {
+    transform: none !important;
+  }
+  
+  .tech-specs-image:hover img {
+    transform: none !important;
+  }
+}

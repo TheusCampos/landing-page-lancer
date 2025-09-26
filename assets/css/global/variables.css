@@ -1,0 +1,20 @@
+/* Variáveis globais de cores, tipografia e espaçamento */
+:root {
+  --primary-color: #b30000;
+  --secondary-color: #1a1a1a;
+  --accent-color: #333333;
+  --text-light: #f8f9fa;
+  --text-dark: #212529;
+  --font-heading: 'Oswald', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+  --radius-regular: 12px;
+  --shadow-soft: 0 8px 32px rgba(0,0,0,.24);
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+  /* Fundo sutil e harmonioso para a página (permite troca de temas no futuro) */
+  --page-bg: #f5f5f5;
+}

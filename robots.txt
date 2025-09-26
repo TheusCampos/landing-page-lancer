@@ -1,0 +1,4 @@
+# robots.txt básico
+User-agent: *
+Allow: /
+Sitemap: /sitemap.xml

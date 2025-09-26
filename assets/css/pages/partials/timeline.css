@@ -1,0 +1,36 @@
+/* Timeline minimalista e acessível (Home)
+   Comentários em Português: focado em clareza e contraste sem poluir visual */
+
+/* Container: reduz contraste da linha e animações suaves */
+.timeline { position: relative; isolation: isolate; }
+.timeline::after { background: linear-gradient(to bottom, var(--primary-color), rgba(255,255,255,0.3)); opacity: .9; }
+
+/* Itens: usam cartões neutros e sombra discreta herdada quando aplicável */
+.timeline-content { backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px); border: 1px solid rgba(255,255,255,0.12); }
+.timeline-content h4 { margin-top: 0; font-weight: 700; letter-spacing: .2px; }
+.timeline-content p { margin-bottom: 0; line-height: 1.6; }
+
+/* RESTAURAÇÃO DE TOM: sobrescreve neutral-card/neutral-card--muted para manter o vidro translúcido anterior */
+.timeline .neutral-card,
+.timeline .neutral-card--muted,
+.timeline .timeline-content {
+  /* Tom anterior usado na components.css: branco translúcido sutil para efeito glass */
+  background: rgba(255, 255, 255, 0.1) !important; /* prioridade sobre neutral-card */
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  box-shadow: none !important; /* remove sombra de card neutro para não parecer sólido */
+  color: var(--text-light); /* garante legibilidade no dark-section */
+}
+
+/* Marcadores: diminuímos o tamanho para ficar mais sutil em mobile */
+.timeline-item::after { width: 18px; height: 18px; border-width: 3px; }
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .timeline::after { left: 28px; }
+  .timeline-item { padding-left: 56px; }
+}
+
+/* Preferência do usuário por menos movimento */
+@media (prefers-reduced-motion: reduce) {
+  .timeline-content { transition: none !important; }
+}

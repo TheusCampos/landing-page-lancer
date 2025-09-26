@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitsubishi Lancer Evolution - Lenda da Engenharia Automotiva</title>
+    <meta name="description" content="Tributo ao Mitsubishi Lancer Evolution: história, motor, design, performance e galeria.">
+    <!-- SEO básico e social -->
+    <link rel="canonical" href="https://example.com/lancer-evo">
+    <meta property="og:title" content="Mitsubishi Lancer Evolution - Lenda da Engenharia Automotiva">
+    <meta property="og:description" content="História, motor, design, performance e galeria do Lancer Evolution.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://example.com/assets/imagens/lancer-evo-horizontal.jpg">
+    <meta property="og:url" content="https://example.com/lancer-evo">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mitsubishi Lancer Evolution - Lenda">
+    <meta name="twitter:description" content="Tributo ao Lancer Evolution com história, design e performance.">
+    <meta name="twitter:image" content="https://example.com/assets/imagens/lancer-evo-horizontal.jpg">
+    <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+    <link rel="manifest" href="favicons/manifest.json">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- CSS modular -->
+    <link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">MITSUBISHI <span>EVOLUTION</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#historia">História</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#motor">Motor</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#design">Design</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#performance">Performance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#galeria">Galeria</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" aria-label="Introdução">
+        <!-- Vídeo de fundo com autoplay e loop; muted para compatibilidade mobile -->
+        <video id="bgVideo" class="hero-video" src="assets/imagens/PixVerse_V5_Image_Text_360P_Crie_um_videio_360.mp4" autoplay loop playsinline muted aria-hidden="true"></video>
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <div class="hero-content" data-animate>
+                        <h1>MITSUBISHI LANCER EVOLUTION</h1>
+                        <p class="lead">A evolução definitiva do sedan esportivo. Potência, precisão e legado em cada curva.</p>
+                        <div class="hero-form" role="form" aria-labelledby="newsletter-title">
+                            <h2 id="newsletter-title" class="visually-hidden">Assine novidades</h2>
+                            <div class="input-group">
+                                <label for="email" class="form-label text-white">Receba novidades por e-mail</label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="seuemail@exemplo.com" aria-required="true" aria-label="E-mail para assinar novidades">
+                                <button id="subscribeBtn" class="btn btn-danger btn-lg" form="newsletterForm">Explorar a Lenda</button>
+                            </div>
+                            <!-- Form oculto para submissão acessível -->
+                            <form id="newsletterForm" class="d-none" aria-hidden="true"></form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divisor de seção moderno -->
+    <hr class="section-divider" aria-hidden="true">
+
+    <!-- História Section -->
+    <section id="historia" class="content-section dark-section">
+        <div class="container">
+            <h2 class="section-title" data-animate>História e Evolução</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3>Nascido das Pistas de Rali</h3>
+                    <p>O Mitsubishi Lancer Evolution foi concebido em 1992 como um veículo homólogo para o Campeonato Mundial de Rali (WRC). Sua primeira geração, o Evo I, foi uma resposta direta ao Subaru Impreza WRX, iniciando uma rivalidade lendária.</p>
+                    <p>Ao longo de 10 gerações, o Evo evoluiu de um simples sedan de rua adaptado para competição até se tornar uma obra-prima da engenharia automotiva, incorporando tecnologias avançadas de tração integral, controle de estabilidade e aerodinâmica.</p>
+                    <p>Cada geração trouxe melhorias significativas, mantendo sempre o DNA de desempenho que fez do Evo uma lenda tanto nas estradas quanto nas pistas de rali.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="assets/imagens/lancer-evo-removebg-preview.png" alt="Lancer Evolution em ação" class="img-fluid rounded" loading="lazy">
+                </div>
+            </div>
+            
+            <!-- Timeline -->
+            <div class="timeline mt-5">
+                <div class="timeline-item left">
+                    <div class="timeline-content neutral-card neutral-card--muted">
+                        <h4>1992 - Evo I</h4>
+                        <p>Primeira geração com motor 4G63T de 2.0L e 244 cv. Tração integral permanente e diferencial viscoso central.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content neutral-card neutral-card--muted">
+                        <h4>1996 - Evo IV</h4>
+                        <p>Introdução do Active Yaw Control (AYC), revolucionando o comportamento em curvas. Motor mais robusto com 276 cv.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content neutral-card neutral-card--muted">
+                        <h4>2001 - Evo VII</h4>
+                        <p>Nova plataforma com maior distância entre eixos. Sistema ACD (Active Center Differential) para melhor distribuição de torque.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content neutral-card neutral-card--muted">
+                        <h4>2005 - Evo IX</h4>
+                        <p>Considerado por muitos o ápice da série. Motor MIVEC com resposta melhorada e 291 cv.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h4>2007 - Evo X</h4>
+                        <p>Última geração com novo motor 4B11T de alumínio, transmissão de dupla embreagem SST e design completamente renovado.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Motor Section -->
+    <section id="motor" class="content-section engine-specs">
+        <div class="container">
+            <h2 class="section-title text-white">Engenharia e Motor</h2>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="spec-card text-white">
+                        <div class="spec-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>Motor 4G63T</h3>
+                        <p>O coração do Evo I ao IX. Bloco de ferro fundido, cabeçote de alumínio, 16 válvulas e turbocharger. Conhecido por sua robustez e alto potencial de modificação.</p>
+                        <ul>
+                            <li>Cilindrada: 1.997 cc</li>
+                            <li>Potência: até 291 cv (Evo IX)</li>
+                            <li>Torque: até 392 Nm</li>
+                            <li>Configuração: 4 cilindros em linha</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="spec-card text-white">
+                        <div class="spec-icon">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <h3>Motor 4B11T</h3>
+                        <p>Introduzido no Evo X, este motor de bloco de alumínio oferecia melhor relação peso-potência e resposta mais rápida.</p>
+                        <ul>
+                            <li>Cilindrada: 1.998 cc</li>
+                            <li>Potência: 303 cv (295 cv no Japão)</li>
+                            <li>Torque: 414 Nm</li>
+                            <li>Configuração: 4 cilindros em linha</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="spec-card text-white">
+                        <div class="spec-icon">
+                            <i class="fas fa-car-side"></i>
+                        </div>
+                        <h3>Sistema de Tração</h3>
+                        <p>O sistema S-AWC (Super All Wheel Control) combinava múltiplas tecnologias para oferecer tração e estabilidade excepcionais.</p>
+                        <ul>
+                            <li>ACD - Active Center Differential</li>
+                            <li>AYC - Active Yaw Control</li>
+                            <li>ASC - Active Stability Control</li>
+                            <li>ABS - Anti-lock Braking System</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <h3 class="text-white">Tecnologia MIVEC</h3>
+                    <p class="text-white">A partir do Evo IX, o sistema MIVEC (Mitsubishi Innovative Valve timing Electronic Control) permitia variação na sincronização das válvulas, melhorando a eficiência em baixas rotações e o desempenho em altas rotações.</p>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="text-white">Sistema de Intercooler</h3>
+                    <p class="text-white">O intercooler de ar-água (no Evo IV-IX) proporcionava maior densidade do ar admitido, resultando em mais potência e melhor resposta do turbo, especialmente em condições de uso intensivo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Section -->
+    <section id="design" class="content-section">
+        <div class="container">
+            <h2 class="section-title" data-animate>Design e Aerodinâmica</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3>Estética Funcional</h3>
+                    <p>Cada elemento do design do Lancer Evolution foi pensado com um propósito específico, priorizando a funcionalidade sobre a estética pura.</p>
+                    <p>O capô com entrada de ar, o spoiler traseiro, os alargadores de passagem de roda e os difusores não eram meros elementos decorativos, mas componentes essenciais para o desempenho do veículo.</p>
+                    <p>A evolução do design acompanhou as necessidades aerodinâmicas de cada geração, com o Evo X representando o ápice dessa filosofia com linhas mais agressivas e refinadas.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="assets/imagens/lancer-evo-estrada.jpg" alt="Design do Lancer Evolution" class="img-fluid rounded" loading="lazy">
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-md-4">
+                    <h4>Aerodinâmica Ativa</h4>
+                    <p>O spoiler traseiro ajustável do Evo fornecia downforce variável conforme a velocidade, melhorando a estabilidade em altas velocidades.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Refrigeração Otimizada</h4>
+                    <p>As entradas de ar no capô e para-choques direcionavam o fluxo de ar para radiador, intercooler e freios, essenciais para o desempenho em condições extremas.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Chassi Reforçado</h4>
+                    <p>Torres de amortecedores reforçadas, barras estabilizadoras mais espessas e pontos de solda adicionais garantiam rigidez estrutural superior.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divisor de seção moderno -->
+    <hr class="section-divider" aria-hidden="true">
+
+    <!-- Performance Section -->
+    <section id="performance" class="content-section accent-section">
+        <div class="container">
+            <h2 class="section-title" data-animate>Performance e Legado</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <p class="lead">O Lancer Evolution não era apenas rápido em linha reta - era um mestre nas curvas, graças à sua avançada tração integral e sistemas eletrônicos de controle.</p>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-md-4 text-center">
+                    <div class="mb-3">
+                        <i class="fas fa-tachometer-alt fa-3x text-danger"></i>
+                    </div>
+                    <h3>Aceleração</h3>
+                    <p>0-100 km/h em 4.5 a 5.0 segundos (dependendo da geração e transmissão)</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="mb-3">
+                        <i class="fas fa-flag-checkered fa-3x text-danger"></i>
+                    </div>
+                    <h3>Velocidade Máxima</h3>
+                    <p>Limitada eletronicamente a 250 km/h (em algumas versões), mas capaz de atingir mais de 270 km/h sem limitação</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="mb-3">
+                        <i class="fas fa-trophy fa-3x text-danger"></i>
+                    </div>
+                    <h3>Conquistas no Rali</h3>
+                    <p>4 títulos de pilotos no WRC (Tommi Mäkinen, 1996-1999) e 1 título de construtores (1998)</p>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-lg-6">
+                    <h3>Herança nas Pistas</h3>
+                    <p>O sucesso do Lancer Evolution no WRC solidificou sua reputação como um dos sedãs esportivos mais capazes já produzidos. Sua tecnologia de tração integral influenciou uma geração de veículos de alto desempenho.</p>
+                    <p>Mesmo após o fim da produção em 2016, o Evo continua sendo um ícone da cultura automotiva, com uma comunidade dedicada de entusiastas e um mercado secundário vibrante.</p>
+                </div>
+                <div class="col-lg-6">
+                    <h3>Impacto Cultural</h3>
+                    <p>O Evo tornou-se estrela em filmes, videogames (como a série Gran Turismo) e na cultura JDM (Japanese Domestic Market). Representa o ápice da engenharia japonesa dos anos 90 e 2000.</p>
+                    <p>Sua combinação única de desempenho bruto, tecnologia avançada e praticidade do dia a dia criou um legado que poucos carros esportivos conseguiram igualar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divisor de seção moderno -->
+    <hr class="section-divider" aria-hidden="true">
+
+    <!-- Galeria Section -->
+    <section id="galeria" class="content-section">
+        <div class="container">
+            <h2 class="section-title" data-animate>Galeria</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="assets/imagens/Imagem-espelho-2.jpg" alt="Lancer Evolution frontal" loading="lazy" tabindex="0" aria-label="Abrir detalhes: Evo X - Vista Frontal">
+                        <div class="gallery-overlay">
+                            <h5>Evo X - Vista Frontal</h5>
+                            <p>Design agressivo com grande entrada de ar inferior</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="assets/imagens/Imagem-layout-corrida.jpg" alt="Lancer Evolution lateral" loading="lazy" tabindex="0" aria-label="Abrir detalhes: Evo IX - Perfil">
+                        <div class="gallery-overlay">
+                            <h5>Evo IX - Perfil</h5>
+                            <p>Linhas musculares e aerodinâmicas características</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="assets/imagens/Imagem-interior.jpg" alt="Lancer Evolution traseira" loading="lazy" tabindex="0" aria-label="Abrir detalhes: Evo VIII - Traseira">
+                        <div class="gallery-overlay">
+                            <h5>Evo VIII - Traseira</h5>
+                            <p>Spoiler proeminente e saídas de escape duplas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <div class="gallery-item">
+                        <img src="assets/imagens/Imagem-espelho.jpg" alt="Motor do Lancer Evolution" loading="lazy" tabindex="0" aria-label="Abrir detalhes: Motor 4G63T">
+                        <div class="gallery-overlay">
+                            <h5>Motor 4G63T</h5>
+                            <p>O lendário motor turbo de 2.0L que impulsionou a lenda</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="gallery-item">
+                        <img src="assets/imagens/lancer-evo-fundo-preto.jpg" alt="Interior do Lancer Evolution" loading="lazy" tabindex="0" aria-label="Abrir detalhes: Interior Esportivo">
+                        <div class="gallery-overlay">
+                            <h5>Interior Esportivo</h5>
+                            <p>Cabine focada no motorista com assentos Recaro</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divisor de seção moderno -->
+    <hr class="section-divider" aria-hidden="true">
+
+    <!-- Ficha Técnica Section -->
+    <section id="ficha-tecnica" class="content-section tech-specs-section">
+        <div class="container">
+            <h2 class="section-title text-white" data-animate>FICHA TÉCNICA</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="tech-specs-table">
+                        <div class="specs-header">
+                            <div class="spec-category">ESPECIFICAÇÃO</div>
+                            <div class="spec-value">DETALHES</div>
+                        </div>
+                        <div class="specs-body">
+                            <div class="spec-row" data-animate>
+                                <div class="spec-category">Motor</div>
+                                <div class="spec-value">2.0L Turbo DOHC 16V</div>
+                            </div>
+                            <div class="spec-row" data-animate>
+                                <div class="spec-category">Potência</div>
+                                <div class="spec-value">291 cv a 6.500 rpm</div>
+                            </div>
+                            <div class="spec-row" data-animate>
+                                <div class="spec-category">Torque</div>
+                                <div class="spec-value">407 Nm a 3.000 rpm</div>
+                            </div>
+                            <div class="spec-row" data-animate>
+                                <div class="spec-category">Tração</div>
+                                <div class="spec-value">Integral S-AWC</div>
+                            </div>
+                            <div class="spec-row" data-animate>
+                                <div class="spec-category">Transmissão</div>
+                                <div class="spec-value">Manual de 6 marchas</div>
+                            </div>
+                            <div class="spec-row" data-animate>
+                                <div class="spec-category">Consumo Médio</div>
+                                <div class="spec-value">9.5 km/l (cidade) / 12.5 km/l (estrada)</div>
+                            </div>
+                            <div class="spec-row" data-animate>
+                                <div class="spec-category">Dimensões (C/L/A)</div>
+                                <div class="spec-value">4.510 mm / 1.810 mm / 1.480 mm</div>
+                            </div>
+                            <div class="spec-row" data-animate>
+                                <div class="spec-category">Peso</div>
+                                <div class="spec-value">1.545 kg</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="tech-specs-image" data-animate>
+                        <img src="assets/imagens/Desenho-lancer.png" alt="Desenho técnico do Lancer Evolution" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>MITSUBISHI LANCER EVOLUTION</h3>
+                    <p>Uma lenda da engenharia automotiva que transcendeu as pistas de rali para se tornar um ícone cultural.</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-4 mb-4">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>&copy; 2023 Mitsubishi Lancer Evolution - Tributo Não Oficial. Todos os direitos reservados aos respectivos proprietários.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" defer></script>
+    <!-- GSAP core + ScrollTrigger para animações avançadas -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+    <!-- JS modular centralizado -->
+    <script src="assets/js/index.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "Lancer Evolution Tribute",
+  "short_name": "Lancer Evo",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#111111",
+  "theme_color": "#b30000",
+  "icons": [
+    { "src": "/favicons/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

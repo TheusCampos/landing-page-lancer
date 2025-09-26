@@ -1,0 +1,26 @@
+/* Galeria minimalista e acessível (Home)
+   Comentários em Português: foco em acessibilidade, responsividade e sutileza visual */
+
+/* Mantém estilos base da galeria definidos em global/components.css e adiciona melhorias locais */
+.gallery-item { outline: none; }
+.gallery-item:focus-within { box-shadow: 0 0 0 3px rgba(255,255,255,.2), 0 0 0 6px rgba(255,0,0,.35); border-radius: 12px; }
+
+/* Aspect ratio consistente para evitar layout shift ao carregar imagens */
+.gallery-item { aspect-ratio: 4 / 3; height: auto; }
+.gallery-item img { display: block; }
+
+/* Overlay com transição mais suave e acessível */
+.gallery-overlay { transition: transform .35s ease, opacity .35s ease; opacity: 0.98; }
+
+/* Suporte a navegação por teclado: mostrar overlay ao focar a imagem */
+.gallery-item:focus-within .gallery-overlay { transform: translateY(0); }
+
+/* Melhorias em telas pequenas */
+@media (max-width: 576px) {
+  .gallery-item { aspect-ratio: 1 / 1; }
+}
+
+/* Preferência por menos movimento */
+@media (prefers-reduced-motion: reduce) {
+  .gallery-overlay { transition: none; }
+}
