@@ -57,30 +57,26 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section (minimal e morno) -->
     <section class="hero-section" aria-label="Introdução">
         <!-- Vídeo de fundo com autoplay e loop; muted para compatibilidade mobile -->
         <video id="bgVideo" class="hero-video" src="assets/imagens/PixVerse_V5_Image_Text_360P_Crie_um_videio_360.mp4" autoplay loop playsinline muted aria-hidden="true"></video>
         <div class="hero-overlay" aria-hidden="true"></div>
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <div class="hero-content" data-animate>
-                        <h1>MITSUBISHI LANCER EVOLUTION</h1>
-                        <p class="lead">A evolução definitiva do sedan esportivo. Potência, precisão e legado em cada curva.</p>
-                        <div class="hero-form" role="form" aria-labelledby="newsletter-title">
-                            <h2 id="newsletter-title" class="visually-hidden">Assine novidades</h2>
-                            <div class="input-group">
-                                <label for="email" class="form-label text-white">Receba novidades por e-mail</label>
-                                <input type="email" id="email" name="email" class="form-control" placeholder="seuemail@exemplo.com" aria-required="true" aria-label="E-mail para assinar novidades">
-                                <button id="subscribeBtn" class="btn btn-danger btn-lg" form="newsletterForm">Explorar a Lenda</button>
-                            </div>
-                            <!-- Form oculto para submissão acessível -->
-                            <form id="newsletterForm" class="d-none" aria-hidden="true"></form>
-                        </div>
-                    </div>
+
+        <!-- Conteúdo minimalista e direto (sem grid/container pesado) -->
+        <div class="hero-content" data-animate>
+            <h1>MITSUBISHI LANCER EVOLUTION</h1>
+            <p class="lead">A evolução definitiva do sedan esportivo. Potência, precisão e legado em cada curva.</p>
+
+            <!-- Form simplificado: remove o container extra na área de e-mail -->
+            <form id="newsletterForm" class="hero-form" role="form" aria-labelledby="newsletter-title">
+                <h2 id="newsletter-title" class="visually-hidden">Assine novidades</h2>
+                <label for="email" class="visually-hidden">E-mail</label>
+                <div class="input-group">
+                    <input type="email" id="email" name="email" class="form-control" placeholder="seuemail@exemplo.com" aria-required="true" aria-label="E-mail para assinar novidades">
+                    <button id="subscribeBtn" class="btn btn-danger btn-lg" type="submit">Explorar a Lenda</button>
                 </div>
-            </div>
+            </form>
         </div>
     </section>
 
@@ -348,61 +344,69 @@
         </div>
     </section>
 
-    <!-- Divisor de seção moderno -->
-    <hr class="section-divider" aria-hidden="true">
 
-    <!-- Ficha Técnica Section -->
+    <!-- Ficha Técnica Section (moderna e minimalista) -->
     <section id="ficha-tecnica" class="content-section tech-specs-section">
         <div class="container">
             <h2 class="section-title text-white" data-animate>FICHA TÉCNICA</h2>
-            <div class="row align-items-center">
-                <div class="col-lg-7">
-                    <div class="tech-specs-table">
-                        <div class="specs-header">
-                            <div class="spec-category">ESPECIFICAÇÃO</div>
-                            <div class="spec-value">DETALHES</div>
-                        </div>
-                        <div class="specs-body">
-                            <div class="spec-row" data-animate>
-                                <div class="spec-category">Motor</div>
-                                <div class="spec-value">2.0L Turbo DOHC 16V</div>
-                            </div>
-                            <div class="spec-row" data-animate>
-                                <div class="spec-category">Potência</div>
-                                <div class="spec-value">291 cv a 6.500 rpm</div>
-                            </div>
-                            <div class="spec-row" data-animate>
-                                <div class="spec-category">Torque</div>
-                                <div class="spec-value">407 Nm a 3.000 rpm</div>
-                            </div>
-                            <div class="spec-row" data-animate>
-                                <div class="spec-category">Tração</div>
-                                <div class="spec-value">Integral S-AWC</div>
-                            </div>
-                            <div class="spec-row" data-animate>
-                                <div class="spec-category">Transmissão</div>
-                                <div class="spec-value">Manual de 6 marchas</div>
-                            </div>
-                            <div class="spec-row" data-animate>
-                                <div class="spec-category">Consumo Médio</div>
-                                <div class="spec-value">9.5 km/l (cidade) / 12.5 km/l (estrada)</div>
-                            </div>
-                            <div class="spec-row" data-animate>
-                                <div class="spec-category">Dimensões (C/L/A)</div>
-                                <div class="spec-value">4.510 mm / 1.810 mm / 1.480 mm</div>
-                            </div>
-                            <div class="spec-row" data-animate>
-                                <div class="spec-category">Peso</div>
-                                <div class="spec-value">1.545 kg</div>
-                            </div>
-                        </div>
-                    </div>
+
+            <div class="tech-specs-layout">
+                <div class="tech-specs-grid" data-animate>
+                    <table class="tech-table" aria-label="Ficha técnica do Mitsubishi Lancer Evolution">
+                        <thead>
+                            <tr>
+                                <th>ESPECIFICAÇÃO</th>
+                                <th>DETALHES</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Motor</td>
+                                <td>2.0L Turbo DOHC 16V</td>
+                            </tr>
+                            <tr>
+                                <td>Potência</td>
+                                <td>291 cv a 6.500 rpm</td>
+                            </tr>
+                            <tr>
+                                <td>Torque</td>
+                                <td>407 Nm a 3.000 rpm</td>
+                            </tr>
+                            <tr>
+                                <td>Tração</td>
+                                <td>Integral S-AWC</td>
+                            </tr>
+                            <tr>
+                                <td>Transmissão</td>
+                                <td>Manual de 6 marchas</td>
+                            </tr>
+                            <tr>
+                                <td>Consumo Médio</td>
+                                <td>9.5 km/l (cidade) / 12.5 km/l (estrada)</td>
+                            </tr>
+                            <tr>
+                                <td>Dimensões (C/L/A)</td>
+                                <td>4.510 mm / 1.810 mm / 1.480 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Peso</td>
+                                <td>1.545 kg</td>
+                            </tr>
+                            <tr>
+                                <td>Velocidade Máxima</td>
+                                <td>242 km/h (aprox.)</td>
+                            </tr>
+                            <tr>
+                                <td>0–100 km/h</td>
+                                <td>5,7 s (aprox.)</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="col-lg-5">
-                    <div class="tech-specs-image" data-animate>
-                        <img src="assets/imagens/Desenho-lancer.png" alt="Desenho técnico do Lancer Evolution" class="img-fluid">
-                    </div>
-                </div>
+
+                <figure class="tech-specs-illustration" data-animate>
+                    <img src="assets/imagens/Desenho-lancer.png" alt="Desenho técnico do Lancer Evolution" class="img-fluid">
+                </figure>
             </div>
         </div>
     </section>
